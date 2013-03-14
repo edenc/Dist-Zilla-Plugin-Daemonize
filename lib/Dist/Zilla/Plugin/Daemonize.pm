@@ -2,6 +2,8 @@ package Dist::Zilla::Plugin::Daemonize;
 use Moose;
 use Daemon::Control;
 
+# ABSTRACT: start daemons in your build automatically, for testing
+
 with 'Dist::Zilla::Role::AfterBuild';
 
 has daemon_control => (isa => 'Daemon::Control', is => 'ro', lazy_build => 1);
